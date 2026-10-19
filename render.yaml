@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: pyrofleet-5-userbot
+    runtime: python
+    plan: free
+    buildCommand: pip install --no-cache-dir -r requirements.txt
+    startCommand: python3 main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
